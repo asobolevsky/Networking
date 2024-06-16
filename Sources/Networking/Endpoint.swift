@@ -31,6 +31,8 @@ public extension Endpoint {
         }
 
         var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
+
         if let parameters {
             switch method {
             case .GET:
